@@ -22,8 +22,7 @@ def write_AES_keys(list_dicts):
     write_JSON(final_dict, 'private_AES.json')
 
 def write_keys_list(keys, name = 'public_key.json', n = 3):  # public or private key as a bool(0 = Public, 1 = Private), keys as a list
-    data = {}                                 # Takes a list of bytes as input.
-    data['keys'] = []
+    data = {'keys': []}                                 # Takes a list of bytes as input.
     for i in range(0, n+1, 1):
         data['keys'].append({
             'key '+ str(i): keys[i].decode()
